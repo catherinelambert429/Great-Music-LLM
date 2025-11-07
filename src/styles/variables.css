@@ -1,0 +1,81 @@
+/* Design System Variables for Great Music LLM */
+
+:root {
+  /* Color Palette */
+  --color-primary: #0A1931;        /* Deep Navy - sophistication */
+  --color-secondary: #D4AF37;      /* Rich Gold - luxury */
+  --color-accent: #722F37;         /* Burgundy - elegance */
+  --color-neutral: #F8F6F1;        /* Cream - refined */
+  --color-text-dark: #2D2D2D;      /* Charcoal */
+  --color-text-light: #FFFFFF;     /* White */
+  --color-background: #FFFFFF;
+  --color-overlay: rgba(10, 25, 49, 0.85);
+
+  /* Typography - Elegant & Cursive */
+  --font-heading: 'Cormorant Garamond', 'Georgia', serif;  /* Elegant serif with cursive feel */
+  --font-display: 'Cinzel', 'Georgia', serif;               /* Luxury display font */
+  --font-cursive: 'Great Vibes', 'Tangerine', cursive;     /* True cursive/script font */
+  --font-body: 'Montserrat', 'Helvetica Neue', sans-serif; /* Clean, sophisticated sans-serif */
+
+  /* Font Sizes */
+  --font-size-xs: 0.875rem;       /* 14px */
+  --font-size-sm: 1rem;           /* 16px */
+  --font-size-md: 1.125rem;       /* 18px */
+  --font-size-lg: 1.5rem;         /* 24px */
+  --font-size-xl: 2rem;           /* 32px */
+  --font-size-2xl: 2.5rem;        /* 40px */
+  --font-size-3xl: 3rem;          /* 48px */
+  --font-size-4xl: 3.5rem;        /* 56px */
+  --font-size-5xl: 4rem;          /* 64px */
+
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;           /* 8px */
+  --spacing-sm: 1rem;             /* 16px */
+  --spacing-md: 1.5rem;           /* 24px */
+  --spacing-lg: 2rem;             /* 32px */
+  --spacing-xl: 3rem;             /* 48px */
+  --spacing-2xl: 4rem;            /* 64px */
+  --spacing-3xl: 6rem;            /* 96px */
+  --spacing-4xl: 8rem;            /* 128px */
+
+  /* Layout */
+  --container-max-width: 1280px;
+  --container-padding: 2rem;
+  --section-padding: 5rem 2rem;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+  --shadow-xl: 0 12px 36px rgba(0, 0, 0, 0.25);
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* Z-Index Layers */
+  --z-index-navbar: 1000;
+  --z-index-dropdown: 900;
+  --z-index-modal: 1100;
+  --z-index-overlay: 800;
+}
+
+/* Responsive Breakpoints */
+/* Mobile: 320px - 767px */
+/* Tablet: 768px - 1023px */
+/* Desktop: 1024px - 1439px */
+/* Large Desktop: 1440px+ */
