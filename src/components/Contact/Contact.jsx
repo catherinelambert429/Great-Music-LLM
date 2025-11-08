@@ -6,6 +6,7 @@ import './Contact.css';
 
 const Contact = () => {
   const ref = useRef(null);
+  const dateInputRef = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [formData, setFormData] = useState({
     name: '',
@@ -33,6 +34,12 @@ const Contact = () => {
       eventDate: '',
       message: ''
     });
+  };
+
+  const handleDateFieldClick = () => {
+    if (dateInputRef.current) {
+      dateInputRef.current.showPicker();
+    }
   };
 
   const contactInfo = [
@@ -146,8 +153,10 @@ const Contact = () => {
                 type="date"
                 id="eventDate"
                 name="eventDate"
+                ref={dateInputRef}
                 value={formData.eventDate}
                 onChange={handleChange}
+                onClick={handleDateFieldClick}
               />
             </div>
 
