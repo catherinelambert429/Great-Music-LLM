@@ -214,6 +214,7 @@
     height: auto;
     line-height: normal;
     min-height: 44px;
+    color: var(--color-text-dark);
   }
 
   .form-group input[type="date"]::-webkit-datetime-edit-text,
@@ -221,6 +222,16 @@
   .form-group input[type="date"]::-webkit-datetime-edit-day-field,
   .form-group input[type="date"]::-webkit-datetime-edit-year-field {
     padding: 0;
+    color: var(--color-text-dark);
+  }
+
+  .form-group input[type="date"]::-webkit-datetime-edit-fields-wrapper {
+    padding: 0;
+  }
+
+  .form-group input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 1;
+    margin-left: 4px;
   }
 
   .contact-info-item:hover {
