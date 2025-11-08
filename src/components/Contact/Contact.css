@@ -210,12 +210,17 @@
   }
 
   .form-group input[type="date"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
     padding: var(--spacing-sm) !important;
     height: auto;
     line-height: normal;
+    min-height: 44px;
+  }
+
+  .form-group input[type="date"]::-webkit-datetime-edit-text,
+  .form-group input[type="date"]::-webkit-datetime-edit-month-field,
+  .form-group input[type="date"]::-webkit-datetime-edit-day-field,
+  .form-group input[type="date"]::-webkit-datetime-edit-year-field {
+    padding: 0;
   }
 
   .contact-info-item:hover {
