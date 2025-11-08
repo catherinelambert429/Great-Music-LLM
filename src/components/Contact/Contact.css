@@ -106,6 +106,9 @@
 
 .form-group input[type="date"] {
   cursor: pointer;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
 .form-group input[type="date"]::-webkit-calendar-picker-indicator {
@@ -210,6 +213,9 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    padding: var(--spacing-sm) !important;
+    height: auto;
+    line-height: normal;
   }
 
   .contact-info-item:hover {
