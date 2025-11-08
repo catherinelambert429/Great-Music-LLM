@@ -73,7 +73,7 @@ const Footer = () => {
           <div className="footer-section">
             <h4 className="footer-heading">Contact</h4>
             <ul className="footer-links">
-              <li>New York, NY</li>
+              <li>Montreal, QC</li>
               <li>
                 <a href="mailto:info@greatmusicllm.com">info@greatmusicllm.com</a>
               </li>

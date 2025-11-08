@@ -49,7 +49,7 @@ const Contact = () => {
     {
       icon: <FaMapMarkerAlt />,
       title: 'Location',
-      detail: 'New York, NY'
+      detail: 'Montreal, QC'
     }
   ];
 

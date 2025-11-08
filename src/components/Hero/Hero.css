@@ -5,10 +5,9 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
   background-image:
-    linear-gradient(rgba(10, 25, 49, 0.8), rgba(114, 47, 55, 0.7)),
-    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="music-pattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><text x="20" y="50" font-size="40" fill="rgba(212,175,55,0.05)" font-family="serif">&#x1D11E;</text><text x="60" y="30" font-size="30" fill="rgba(212,175,55,0.03)" font-family="serif">&#x1D122;</text></pattern></defs><rect width="1200" height="600" fill="url(%23music-pattern)"/></svg>');
+    linear-gradient(rgba(10, 25, 49, 0.3), rgba(10, 25, 49, 0.5)),
+    url('https://images.unsplash.com/photo-1465847899084-d164df4dedc6?q=80&w=2070&auto=format&fit=crop');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -20,7 +19,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at center, transparent 0%, rgba(10, 25, 49, 0.4) 100%);
+  background: radial-gradient(circle at center, transparent 0%, rgba(10, 25, 49, 0.2) 100%);
   z-index: 1;
 }
 
@@ -30,16 +29,23 @@
   text-align: center;
   color: var(--color-text-light);
   max-width: 900px;
+  padding: var(--spacing-xl);
+  background: rgba(10, 25, 49, 0.65);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
 .hero-subtitle {
   font-family: var(--font-body);
   font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-medium);
-  letter-spacing: 3px;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 4px;
   text-transform: uppercase;
   color: var(--color-secondary);
   margin-bottom: var(--spacing-md);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .hero-title {
@@ -49,6 +55,7 @@
   line-height: 1.1;
   color: var(--color-text-light);
   margin-bottom: var(--spacing-lg);
+  text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.7);
 }
 
 .hero-title-accent {
@@ -58,6 +65,8 @@
   font-style: normal;
   display: block;
   margin-top: 0.5rem;
+  text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.7);
+  font-size: 1.1em;
 }
 
 .hero-description {
@@ -68,6 +77,8 @@
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  font-weight: var(--font-weight-medium);
 }
 
 /* Buttons */
@@ -177,17 +188,23 @@
     padding: 8rem 0 4rem;
   }
 
+  .hero-content {
+    padding: var(--spacing-lg);
+    margin: 0 1rem;
+  }
+
   .hero-title {
     font-size: var(--font-size-3xl);
   }
 
   .hero-subtitle {
     font-size: var(--font-size-xs);
+    letter-spacing: 2px;
   }
 
   .hero-description {
     font-size: var(--font-size-sm);
-    padding: 0 1rem;
+    padding: 0;
   }
 
   .hero-buttons {

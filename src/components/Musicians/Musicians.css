@@ -31,7 +31,7 @@
   backdrop-filter: blur(10px);
   border: 2px solid rgba(212, 175, 55, 0.2);
   border-radius: var(--radius-lg);
-  padding: var(--spacing-2xl);
+  padding: 0;
   transition: all var(--transition-normal);
   position: relative;
   overflow: hidden;
@@ -60,32 +60,30 @@
   transform: translateY(-5px);
 }
 
-.musician-icon-wrapper {
+.musician-image-wrapper {
   position: relative;
   z-index: 2;
-  margin-bottom: var(--spacing-lg);
-  text-align: center;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
 }
 
-.musician-icon {
-  font-size: 4rem;
-  color: var(--color-secondary);
-  display: inline-flex;
-  padding: var(--spacing-lg);
-  background-color: rgba(212, 175, 55, 0.1);
-  border-radius: 50%;
-  transition: all var(--transition-normal);
+.musician-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
 }
 
-.musician-card:hover .musician-icon {
-  transform: scale(1.1) rotate(10deg);
-  background-color: rgba(212, 175, 55, 0.2);
+.musician-card:hover .musician-image {
+  transform: scale(1.05);
 }
 
 .musician-info {
   position: relative;
   z-index: 2;
   text-align: center;
+  padding: var(--spacing-xl);
 }
 
 .musician-name {
@@ -126,15 +124,15 @@
     grid-template-columns: 1fr;
   }
 
-  .musician-card {
-    padding: var(--spacing-xl);
+  .musician-info {
+    padding: var(--spacing-lg);
   }
 
   .musicians-intro {
     font-size: var(--font-size-sm);
   }
 
-  .musician-icon {
-    font-size: 3rem;
+  .musician-image-wrapper {
+    height: 250px;
   }
 }
