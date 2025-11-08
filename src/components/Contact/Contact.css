@@ -200,6 +200,18 @@
     width: 100%;
   }
 
+  .form-group input,
+  .form-group textarea {
+    padding: var(--spacing-sm);
+    font-size: var(--font-size-sm);
+  }
+
+  .form-group input[type="date"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
   .contact-info-item:hover {
     transform: translateY(-3px);
   }
