@@ -66,6 +66,8 @@
   font-size: var(--font-size-sm);
   color: var(--color-text-dark);
   margin: 0;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Contact Form */
@@ -159,6 +161,21 @@
     flex: 1 1 100%;
     width: 100%;
     justify-content: flex-start;
+    padding: var(--spacing-md);
+  }
+
+  .contact-info-text {
+    overflow: hidden;
+    min-width: 0;
+  }
+
+  .contact-info-text p {
+    font-size: var(--font-size-xs);
+  }
+
+  .contact-info-icon {
+    font-size: var(--font-size-xl);
+    min-width: 40px;
   }
 
   .contact-form {
