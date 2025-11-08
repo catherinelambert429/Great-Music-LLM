@@ -90,6 +90,15 @@
   margin-bottom: var(--spacing-lg);
 }
 
+.form-label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-dark);
+  margin-bottom: var(--spacing-xs);
+}
+
 .form-group input,
 .form-group textarea {
   width: 100%;

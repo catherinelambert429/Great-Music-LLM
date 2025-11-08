@@ -141,10 +141,11 @@ const Contact = () => {
             </div>
 
             <div className="form-group">
+              <label htmlFor="eventDate" className="form-label">Event Date</label>
               <input
                 type="date"
+                id="eventDate"
                 name="eventDate"
-                placeholder="Event Date"
                 value={formData.eventDate}
                 onChange={handleChange}
               />
