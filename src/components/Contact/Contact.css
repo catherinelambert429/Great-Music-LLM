@@ -141,10 +141,15 @@
 
   .contact-info-section {
     flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
 
   .contact-info-item {
     flex: 1 1 100%;
+    width: 100%;
+    max-width: 100%;
+    justify-content: flex-start;
   }
 
   .contact-form {
@@ -152,6 +157,6 @@
   }
 
   .contact-info-item:hover {
-    transform: translateX(5px);
+    transform: translateY(-3px);
   }
 }
