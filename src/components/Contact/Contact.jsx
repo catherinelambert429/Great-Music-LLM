@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import { supabase } from '../../lib/supabase';
 import './Contact.css';
 
 const Contact = () => {
@@ -15,6 +16,8 @@ const Contact = () => {
     eventDate: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState({ type: '', message: '' });
 
   const handleChange = (e) => {
     setFormData({
@@ -23,17 +26,53 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    alert('Thank you for your inquiry! We will contact you shortly.');
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      eventDate: '',
-      message: ''
-    });
+    setIsSubmitting(true);
+    setSubmitStatus({ type: '', message: '' });
+
+    try {
+      const { error } = await supabase
+        .from('contact_submissions')
+        .insert([
+          {
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone || null,
+            event_date: formData.eventDate || null,
+            message: formData.message
+          }
+        ]);
+
+      if (error) throw error;
+
+      setSubmitStatus({
+        type: 'success',
+        message: 'Thank you for your inquiry! We will contact you shortly.'
+      });
+
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        eventDate: '',
+        message: ''
+      });
+
+      // Clear success message after 5 seconds
+      setTimeout(() => {
+        setSubmitStatus({ type: '', message: '' });
+      }, 5000);
+
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus({
+        type: 'error',
+        message: 'Failed to submit your inquiry. Please try again or contact us directly.'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleDateFieldClick = () => {
@@ -171,8 +210,14 @@ const Contact = () => {
               ></textarea>
             </div>
 
-            <button type="submit" className="btn btn-primary">
-              Send Inquiry
+            {submitStatus.message && (
+              <div className={`submit-message ${submitStatus.type}`}>
+                {submitStatus.message}
+              </div>
+            )}
+
+            <button type="submit" className="btn btn-primary" disabled={isSubmitting}>
+              {isSubmitting ? 'Sending...' : 'Send Inquiry'}
             </button>
           </motion.form>
         </div>
